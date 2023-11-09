@@ -1,5 +1,5 @@
-const glossary = require('./routes');
+const routes = require('./routes');
 
 module.exports = [
-  glossary
-]
+  ...routes
+];

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const data = require('./glossary.data.json');
+const data = require('./mind-map.data');
 
 router.get('/', (req, res) => {
   res.send(data);
