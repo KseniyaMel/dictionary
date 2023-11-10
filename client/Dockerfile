@@ -1,8 +1,6 @@
 FROM node:18-alpine as build
-ARG SERVER_URL
-WORKDIR /app
-ENV PATH /app/node_modules/.bin:$PATH
-COPY *.json *.lock ./
-RUN npm i react-scripts@latest --force
+WORKDIR /usr/app/front
+EXPOSE 3000
 COPY . .
-RUN REACT_APP_SERVER_URL=${SERVER_URL} npm run build
+RUN npm install --force
+CMD ["npm", "start"]

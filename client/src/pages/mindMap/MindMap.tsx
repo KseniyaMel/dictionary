@@ -74,7 +74,7 @@ export const MindMap: React.FC = () => {
   const [data, setData] = useState<any>(null);
 
   const callBackendAPI = async () => {
-    const response = await fetch('/mind-map');
+    const response = await fetch('http://localhost:5000/mind-map');
     const body = await response.json();
     if (response.status !== 200) {
       throw Error(body.message)
