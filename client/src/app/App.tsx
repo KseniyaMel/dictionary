@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Header } from '../components/Header/Header';
 import { Glossary } from '../pages/glossary/Glossary';
-import { IGlossary } from '../data/IGlossary';
 import { MindMap } from '../pages/mindMap/MindMap';
 
 function App() {

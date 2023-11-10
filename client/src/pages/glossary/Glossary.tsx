@@ -7,7 +7,7 @@ export const Glossary: React.FC = () => {
   const [words, setWords] = useState<IGlossary[] | null>(null);
 
   const callBackendAPI = async () => {
-    const response = await fetch('/glossary');
+    const response = await fetch('http://localhost:5000/glossary');
     const body = await response.json();
     if (response.status !== 200) {
       throw Error(body.message)
