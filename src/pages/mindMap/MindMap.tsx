@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FlowAnalysisGraph, FlowAnalysisGraphConfig } from "@ant-design/charts";
-import LoadingScreen from "../../components/Loading/Loading";
+import data from "../../data/constants/mind-map";
+
 
 //@ts-ignore
 const getConfig: (data: any) => FlowAnalysisGraphConfig = (data: any) => ({
@@ -70,31 +71,8 @@ const getConfig: (data: any) => FlowAnalysisGraphConfig = (data: any) => ({
   behaviors: ['drag-canvas', 'zoom-canvas', 'drag-node'],
 });
 
-export const MindMap: React.FC = () => {
-  const [data, setData] = useState<any>(null);
-
-  const callBackendAPI = async () => {
-    const response = await fetch('http://localhost:5000/mind-map');
-    const body = await response.json();
-    if (response.status !== 200) {
-      throw Error(body.message)
-    }
-    return body;
-  };
-
-  useEffect(() => {
-    callBackendAPI()
-      .then(res => setData(res))
-      .catch(err => console.log(err));
-  }, []);
-
-  if (data === null) {
-    return <LoadingScreen />;
-  }
-
-  return (
-    <div id="treeWrapper" style={{ width: 'calc(100% - 80px)', height: 'calc(100vh - 100px)', margin: 20 }} >
-      <FlowAnalysisGraph {...getConfig(data)} style={{ background: 'none' }} />
-    </div >
-  );
-}
+export const MindMap: React.FC = () => (
+  <div id="treeWrapper" style={{ width: 'calc(100% - 80px)', height: 'calc(100vh - 100px)', margin: 20 }} >
+    <FlowAnalysisGraph {...getConfig(data)} style={{ background: 'none' }} />
+  </div >
+);
