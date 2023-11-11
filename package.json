@@ -2,7 +2,7 @@
   "name": "dictionary",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kseniyamel.github.io/dictionary",
+  "homepage": "https://kseniyamel.github.io/dictionary/",
   "dependencies": {
     "@ant-design/charts": "^1.4.2",
     "@testing-library/jest-dom": "^5.17.0",
