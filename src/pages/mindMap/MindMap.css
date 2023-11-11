@@ -1,0 +1,5 @@
+.treeWrapper {
+  width: calc(100% - 80px);
+  height: calc(100vh - 100px);
+  margin: 20px;
+}

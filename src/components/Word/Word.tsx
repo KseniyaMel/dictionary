@@ -1,7 +1,5 @@
-import { Button, Card } from "antd";
-import { Link, Outlet } from "react-router-dom";
+import { Card } from "antd";
 import { IGlossary } from "../../data/IGlossary";
-import Meta from "antd/es/card/Meta";
 
 interface IWordProps {
   word: IGlossary

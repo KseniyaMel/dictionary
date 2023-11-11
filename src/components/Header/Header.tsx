@@ -1,7 +1,7 @@
 import { RadarChartOutlined, ReadOutlined } from "@ant-design/icons";
 import { Avatar, Button } from "antd";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import IIcon from './i_icon.png';
+import IIcon from '../../assets/i_icon.png'
 
 export const Header: React.FC = () => {
   const location = useLocation();
